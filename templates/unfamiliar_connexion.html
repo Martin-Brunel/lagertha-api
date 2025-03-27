@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .code {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 20px 0;
+            text-align: center;
+            padding: 10px;
+            border: 1px dashed #333;
+            display: inline-block;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #aaa;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Alert: New Device Sign-In Detected</div>
+        <div class="content">
+            <p>Hello {{var:Login:""}},</p>
+            <p>We're reaching out to let you know that there was a recent sign-in to your account from an unfamiliar device. Here are the details of the sign-in for your review:</p>
+            <ul>
+                <li><strong>Time of Access:</strong> {{var:Date:""}} UTC</li>
+                <li><strong>Device:</strong> {{var:Device:""}}</li>
+                <li><strong>IP Address:</strong> {{var:Ip:""}}</li>
+            </ul>
+            <p class="alert">Did You Sign In?</p>
+            <p><strong>Yes, It Was Me:</strong> No further action is needed if you recognize this sign-in.</p>
+            <p><strong>No, It Wasn't Me:</strong> Please secure your account immediately.</p>
+            <p>If you have any concerns or did not authorize this login, we strongly recommend that you change your password and review your account security settings.</p>
+            <p>Best regards,<br>Hb Cyber</p>
+        </div>
+        <div class="footer">
+            &copy; 2024 Hb cyber. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

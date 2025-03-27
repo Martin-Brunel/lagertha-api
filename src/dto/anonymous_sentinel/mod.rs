@@ -1,0 +1,4 @@
+pub mod anonymous_sentinel_insertable;
+pub mod anonymous_sentinel_output;
+pub mod anonymous_sentinel_public_output;
+pub mod anonymous_sentinel_public_input;

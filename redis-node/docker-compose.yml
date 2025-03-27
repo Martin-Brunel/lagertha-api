@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  redis1:
+    image: redis:latest
+    restart: always
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD_1}
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis1-data:/data
+
+  redis2:
+    image: redis:latest
+    restart: always
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD_2}
+    ports:
+      - "6381:6379"
+    volumes:
+      - redis2-data:/data
+
+  redis3:
+    image: redis:latest
+    restart: always
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD_3}
+    ports:
+      - "6382:6379"
+    volumes:
+      - redis3-data:/data
+
+volumes:
+  redis1-data:
+  redis2-data:
+  redis3-data:
+
+# ssP840IJXTiC

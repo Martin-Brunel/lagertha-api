@@ -1,0 +1,5 @@
+-- Your SQL goes here
+ALTER TABLE users ADD COLUMN restricted_ip TEXT[] NOT NULL DEFAULT ARRAY[]::TEXT[];
+ALTER TABLE users ADD COLUMN is_validated BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE users ADD COLUMN validation_code TEXT;
+ALTER TABLE users ADD COLUMN validation_tries INTEGER NOT NULL DEFAULT 0;
